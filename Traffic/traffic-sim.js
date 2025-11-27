@@ -35,7 +35,7 @@ export class TrafficSim {
                 car.pos = (nextCar.pos - 0.01) % 1
             car.distToNextCar = distance;
             let acc = this.acceleration * (car.targetSpeed - car.speed);
-            acc += this.stopping * (distance - car.targetDistance);
+            acc += this.stopping * Math.min(0, distance - car.targetDistance);
             car.acc = acc;
         }
 
