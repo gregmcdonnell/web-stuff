@@ -51,8 +51,9 @@ const guiParams = {
 }
 function createGUI() {
 
-    gui.add(trafficSim, 'aggression', 0.1, 10.0, 0.1).name('Aggression');
-
+    gui.add(trafficSim, 'acceleration', 0.1, 10.0, 0.1).name('Acceleration');
+    gui.add(trafficSim, 'stopping', 0.1, 10.0, 0.1).name('Stopping');
+u
 }
 createGUI();
 
