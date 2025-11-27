@@ -39,6 +39,10 @@ export class TrafficSim {
             car.acc = acc;
         }
 
+        cars[0].speed = 0;
+        cars[0].acc = 0;
+        
+
         // Update car positions
         for (let i = 0; i < this.nCars; i++) {
             this.cars[i].step(dt);
