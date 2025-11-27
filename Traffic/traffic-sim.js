@@ -7,7 +7,8 @@ export class TrafficSim {
         this.nCars = nCars;
         /** @type {Car[]} */
         this.cars = [];
-        this.aggression = 1;
+        this.acceleratiom = 1;
+        this.stopping = .2
         this.initCars(nCars);
     }
 
@@ -33,9 +34,9 @@ export class TrafficSim {
             if (distance < 0.01)
                 car.pos = (nextCar.pos - 0.01) % 1
             car.distToNextCar = distance;
-            let acc = car.targetSpeed - car.speed;
-            acc += distance - car.targetDistance;
-            car.acc = acc * this.aggression;
+            let acc = this.acceleration * (car.targetSpeed - car.speed);
+            acc += this.stopping * (distance - car.targetDistance);
+            car.acc = acc;
         }
 
         // Update car positions
