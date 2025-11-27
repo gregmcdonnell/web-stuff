@@ -7,7 +7,7 @@ export class TrafficSim {
         this.nCars = nCars;
         /** @type {Car[]} */
         this.cars = [];
-        this.acceleratiom = 1;
+        this.acceleration = 1;
         this.stopping = .2
         this.initCars(nCars);
     }
