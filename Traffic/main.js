@@ -53,7 +53,7 @@ function createGUI() {
 
     gui.add(trafficSim, 'acceleration', 0.1, 10.0, 0.1).name('Acceleration');
     gui.add(trafficSim, 'stopping', 0.1, 10.0, 0.1).name('Stopping');
-    gui.add(trafficSim, 'nCars', 2, 30, 1).onChange((val) => trafficSim.initCars(val));
+    // gui.add(trafficSim, 'nCars', 2, 30, 1).onChange((val) => trafficSim.initCars(val));
 }
 createGUI();
 
