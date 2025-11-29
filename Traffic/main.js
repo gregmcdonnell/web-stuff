@@ -85,7 +85,7 @@ function drawScene() {
 function animate() {
     const dt = 0.01;
     time += dt;
-    trafficSim.update(dt)
+    //trafficSim.update(dt)
     drawScene();
     // renderer.render(scene, camera);
     requestAnimationFrame(animate);
